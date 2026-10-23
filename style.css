@@ -1,0 +1,587 @@
+:root{--primary:#4261ab;--primary-dark:#2d4783;--primary-soft:#eaf6fc;--ink:#171719;--text:#2d2d31;--muted:#6a6b70;--white:#fff;--surface:#f6f9fc;--warm:#edf5fa;--border:#dce6ee;--dark:#16233d;--shadow:0 18px 50px rgba(23,23,25,.1);--max:1200px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{overflow-x:hidden;background:#fff;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.65}img,video{display:block;max-width:100%}audio{max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible,audio:focus-visible,video:focus-visible{outline:3px solid #235c9f;outline-offset:4px}.skip-link{position:fixed;z-index:5000;top:12px;left:12px;padding:10px 14px;background:#111;color:#fff;transform:translateY(-160%)}.skip-link:focus{transform:none}.container{width:min(92%,var(--max));margin:auto}.section{padding:88px 0}.eyebrow{margin-bottom:12px;color:var(--primary);font-size:.76rem;font-weight:800;letter-spacing:.16em}.eyebrow-light{color:#b8e2f8}h1,h2,h3{color:var(--ink);line-height:1.1}h1{font-size:clamp(3rem,7vw,5.9rem);letter-spacing:-.065em}h2{font-size:clamp(2rem,4.5vw,3.55rem);letter-spacing:-.045em}h3{font-size:1.14rem}p{color:var(--muted)}
+.btn{display:inline-flex;min-height:50px;align-items:center;justify-content:center;padding:0 24px;border:1px solid transparent;border-radius:999px;font-size:.9rem;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark)}.btn-outline{border-color:#c9c9c6}.btn-light{background:#fff;color:var(--primary-dark)}.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}.button-row{display:flex;flex-wrap:wrap;gap:12px}
+.announcement{background:var(--primary-dark)}.announcement-inner{min-height:34px;display:flex;align-items:center;justify-content:center;gap:24px;font-size:.75rem}.announcement p,.announcement a{color:#fff}.announcement a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.site-header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(228,227,224,.9);background:rgba(255,255,255,.97)}.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:inline-flex;align-items:center;gap:9px}.brand-icon{display:grid;width:42px;height:42px;place-items:center;border-radius:50%;background:var(--primary);color:#fff;font-size:.78rem;font-weight:900}.brand-copy{display:flex;flex-direction:column;line-height:1}.brand-copy strong{color:var(--ink)}.brand-copy small{margin-top:4px;color:var(--muted);font-size:.56rem;font-weight:800;letter-spacing:.18em}.nav-panel,.nav-links{display:flex;align-items:center}.nav-panel{flex:1;justify-content:flex-end;gap:20px}.nav-links{gap:22px}.nav-links a{position:relative;padding:28px 0;color:#38383c;font-size:.83rem;font-weight:700}.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:19px;height:2px;background:var(--primary);transition:.2s}.nav-links a:hover::after{right:0}.nav-appointment{padding:10px 16px;border-radius:999px;background:var(--primary);color:#fff;font-size:.78rem;font-weight:800}.menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--border);border-radius:10px;background:#fff}.menu-toggle span{display:block;width:19px;height:2px;margin:4px auto;background:var(--ink)}
+.hero{overflow:hidden;padding:64px 0 78px;background:radial-gradient(circle at 80% 8%,rgba(66,97,171,.10),transparent 26%),linear-gradient(#fff,#fbfaf8)}.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:68px;align-items:center}.hero-copy{max-width:590px}.hero-copy h1 span{color:var(--primary)}.hero-description{max-width:530px;margin:24px 0 30px;font-size:1.08rem}.hero-trust{display:flex;flex-wrap:wrap;gap:28px;margin-top:36px;padding-top:24px;border-top:1px solid var(--border)}.hero-trust div{display:flex;flex-direction:column}.hero-trust strong{color:var(--ink);font-size:.9rem}.hero-trust span{color:var(--muted);font-size:.76rem}.hero-visual{position:relative}.hero-visual>img{width:100%;min-height:520px;aspect-ratio:1/.92;object-fit:cover;border-radius:6px 6px 52px 6px;box-shadow:var(--shadow)}.hero-badge{position:absolute;right:-20px;bottom:26px;width:210px;padding:20px 22px;border:1px solid #eee;background:rgba(255,255,255,.95);box-shadow:0 8px 24px rgba(0,0,0,.08)}.hero-badge span,.hero-badge strong,.hero-badge small{display:block}.hero-badge span{color:var(--primary);font-size:.65rem;font-weight:900}.hero-badge strong{color:var(--ink)}.hero-badge small{color:var(--muted)}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:38px}.section-heading>div{max-width:730px}.section-heading h2,.center-heading h2{margin-bottom:14px}.section-link,.text-arrow{color:var(--primary);font-size:.88rem;font-weight:800}.center-heading{max-width:700px;margin:0 auto 38px;text-align:center}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category-card{position:relative;min-height:390px;overflow:hidden;background:#16233d}.category-card img{width:100%;height:100%;min-height:390px;object-fit:cover;transition:.35s}.category-card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(13,15,17,.82))}.category-card:hover img{transform:scale(1.035)}.category-overlay{position:absolute;z-index:2;left:22px;right:22px;bottom:22px}.category-overlay p,.category-overlay h3,.category-overlay span{color:#fff}.category-overlay p{font-size:.65rem}.category-overlay h3{margin:8px 0;font-size:1.36rem}.category-overlay span{font-size:.78rem;font-weight:700}
+.product-section{background:var(--surface)}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product-card{overflow:hidden;border:1px solid var(--border);background:#fff;transition:.22s}.product-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,0,0,.06)}.product-image{position:relative;overflow:hidden;background:#f1f0ed}.product-image img{width:100%;aspect-ratio:1/.92;object-fit:cover;transition:.3s}.product-card:hover .product-image img{transform:scale(1.025)}.product-badge{position:absolute;z-index:2;top:12px;left:12px;padding:6px 9px;background:var(--ink);color:#fff;font-size:.58rem;font-weight:900}.product-info{padding:18px}.product-type{font-size:.62rem;font-weight:800;letter-spacing:.1em}.product-info h3{min-height:42px;margin:6px 0 17px}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}.product-bottom strong{color:var(--primary)}.product-bottom a{font-size:.74rem;font-weight:800}
+.promo-strip{background:var(--primary)}.promo-strip-grid{min-height:460px;display:grid;grid-template-columns:.9fr 1.1fr}.promo-copy{align-self:center;padding:64px 58px 64px 0}.promo-copy h2,.promo-copy p{color:#fff}.promo-copy p:not(.eyebrow){max-width:500px;margin:16px 0 27px;color:rgba(255,255,255,.83)}.promo-image-wrap{width:calc(100% + 4vw)}.promo-image-wrap img{width:100%;height:100%;min-height:460px;object-fit:cover}
+.contact-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}.contact-copy h2{margin-bottom:20px}.contact-copy>p:not(.eyebrow){margin-bottom:28px}.contact-cards{display:grid;gap:12px}.mini-product{display:grid;grid-template-columns:155px 1fr;align-items:center;gap:20px;padding:12px;border:1px solid var(--border);background:var(--surface)}.mini-product img{width:155px;height:115px;object-fit:cover}.mini-product small{color:var(--primary);font-size:.62rem;font-weight:900}.mini-product h3{margin:5px 0}.mini-product p{font-size:.84rem}
+.discovery-section{background:var(--dark)}.discovery-section .center-heading h2,.discovery-section .center-heading p:not(.eyebrow){color:#fff}.discovery-section .center-heading p:not(.eyebrow){opacity:.68}.filter-tabs{display:flex;justify-content:center;gap:6px;margin-bottom:30px}.filter-btn{padding:10px 16px;border:1px solid #414348;border-radius:999px;background:transparent;color:#d5d5d7;cursor:pointer;font-size:.78rem;font-weight:800}.filter-btn.active{border-color:#fff;background:#fff;color:var(--ink)}.discovery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.discovery-item{background:#24262a}.discovery-item img{width:100%;aspect-ratio:1/.92;object-fit:cover}.discovery-info{padding:17px}.discovery-info small{color:#aeb0b3;font-size:.62rem}.discovery-info h3{margin:5px 0 12px;color:#fff}.discovery-info div{display:flex;justify-content:space-between}.discovery-info strong{color:#b8e2f8}.discovery-info a{color:#fff;font-size:.73rem;font-weight:800}
+.eye-care{background:var(--warm)}.eye-care-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}.eye-care-photo{position:relative}.eye-care-photo img{width:100%;aspect-ratio:.88/1;object-fit:cover;border-radius:0 0 26px 0}.photo-label{position:absolute;left:0;bottom:0;min-width:245px;padding:18px 20px;background:#fff}.photo-label strong,.photo-label span{display:block}.photo-label span{color:var(--muted);font-size:.78rem}.eye-care-content h2{margin-bottom:18px}.service-list{margin:28px 0 30px;border-top:1px solid #d7d3cd}.service{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid #d7d3cd}.service>span{color:var(--primary);font-size:.72rem;font-weight:900}.service h3{margin-bottom:4px;font-size:.98rem}.service p{font-size:.84rem}
+.reading-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.reading-grid>div{max-width:520px}.reading-grid h2{margin-bottom:18px}.reading-grid p{margin-bottom:22px}.reading-grid img{width:100%;max-height:450px;object-fit:cover}
+.media-section{background:var(--surface)}.media-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px}.audio-card,.video-card{border:1px solid var(--border);background:#fff}.audio-card{display:flex;flex-direction:column;justify-content:center;padding:36px}.media-icon{width:48px;height:48px;display:grid;place-items:center;margin-bottom:26px;border-radius:50%;background:var(--primary-soft);color:var(--primary);font-size:1.3rem}.audio-card h3,.video-copy h3{margin-bottom:10px;font-size:1.5rem}.audio-card audio{width:100%;margin-top:26px}.video-wrap{background:#16233d}.video-wrap video{width:100%;max-height:410px;object-fit:cover}.video-copy{padding:25px 28px 28px}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}.why-grid article{min-height:220px;padding:28px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.why-grid span{display:inline-block;margin-bottom:42px;color:var(--primary);font-size:.66rem;font-weight:900}.why-grid h3{margin-bottom:10px}.why-grid p{font-size:.87rem}
+.appointment-section{padding:30px 0 88px}.appointment-card{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:58px;background:var(--primary-dark)}.appointment-card h2,.appointment-card p:not(.eyebrow){color:#fff}.appointment-card>div:first-child{max-width:700px}.appointment-card h2{margin-bottom:12px}.appointment-card p:not(.eyebrow){color:rgba(255,255,255,.78)}
+.blog-section{background:var(--surface)}.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.blog-card{overflow:hidden;border:1px solid var(--border);background:#fff}.blog-card img{width:100%;aspect-ratio:1.45/1;object-fit:cover}.blog-copy{padding:24px}.blog-copy small{color:var(--primary);font-size:.62rem;font-weight:900}.blog-copy h3{margin:8px 0 10px;font-size:1.25rem}.blog-copy p{margin-bottom:18px;font-size:.88rem}.blog-copy a{font-size:.8rem;font-weight:800}
+.store-section{padding:68px 0;background:var(--warm)}.store-grid{display:flex;align-items:center;justify-content:space-between;gap:40px}.store-grid>div{max-width:720px}.store-grid h2{margin-bottom:13px}
+.site-footer{padding:64px 0 22px;background:#14213b;color:#fff}.footer-grid{display:grid;grid-template-columns:1.55fr repeat(4,.8fr);gap:38px;padding-bottom:45px}.brand-footer .brand-copy strong,.brand-footer .brand-copy small{color:#fff}.footer-brand-column>p{max-width:330px;margin-top:18px;color:#a7a8ab;font-size:.84rem}.footer-grid>div:not(.footer-brand-column){display:flex;flex-direction:column;align-items:flex-start;gap:9px}.footer-grid h2{margin-bottom:8px;color:#fff;font-size:.84rem}.footer-grid>div:not(.footer-brand-column) a{color:#a7a8ab;font-size:.8rem}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;border-top:1px solid #2c2e32}.footer-bottom p{color:#77797d;font-size:.73rem}
+@media(max-width:1030px){.menu-toggle{display:block;margin-left:auto}.nav-panel{position:absolute;top:76px;left:0;right:0;display:none;align-items:stretch;flex-direction:column;padding:10px 4% 20px;border-bottom:1px solid var(--border);background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06)}.nav-panel.open{display:flex}.nav-links{align-items:stretch;flex-direction:column;gap:0}.nav-links a{padding:13px 4px;border-bottom:1px solid #f0efed}.nav-links a::after{display:none}.nav-appointment{margin-top:12px;text-align:center}.hero-grid,.contact-grid,.eye-care-grid,.reading-grid{grid-template-columns:1fr;gap:44px}.hero-copy{max-width:760px}.hero-badge{right:22px}.category-grid,.product-grid,.discovery-grid,.why-grid{grid-template-columns:repeat(2,1fr)}.promo-strip-grid{grid-template-columns:1fr}.promo-copy{padding:55px 0}.promo-image-wrap{width:100%}.promo-image-wrap img{min-height:380px}.media-grid{grid-template-columns:1fr}.appointment-card{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:repeat(2,1fr)}.footer-brand-column{grid-column:1/-1}}
+@media(max-width:640px){.announcement-inner{min-height:42px;justify-content:space-between}.announcement p{max-width:190px;font-size:.68rem;line-height:1.3}.announcement a{font-size:.68rem}.section{padding:64px 0}.hero{padding:50px 0 62px}h1{font-size:clamp(2.8rem,16vw,4.4rem)}.hero-description{font-size:1rem}.button-row{flex-direction:column}.button-row .btn{width:100%}.hero-visual>img{min-height:410px;aspect-ratio:.9/1;border-radius:4px 4px 32px 4px}.hero-badge{right:12px;bottom:12px;width:190px}.section-heading{align-items:flex-start;flex-direction:column}.category-grid,.product-grid,.discovery-grid,.why-grid,.blog-grid{grid-template-columns:1fr}.category-card,.category-card img{min-height:330px}.product-info h3{min-height:auto}.promo-copy{padding:48px 0}.promo-image-wrap img{min-height:300px}.mini-product{grid-template-columns:110px 1fr;gap:14px}.mini-product img{width:110px;height:95px}.filter-tabs{flex-wrap:wrap}.audio-card{padding:26px 20px}.appointment-card{width:92%;padding:38px 24px}.store-grid{align-items:flex-start;flex-direction:column}.store-grid .btn{width:100%}.footer-grid{grid-template-columns:1fr}.footer-brand-column{grid-column:auto}.footer-bottom{flex-direction:column}}
+
+/* EO ORIGINAL-LOGO BLUE THEME */
+::selection{
+    background:#b8e2f8;
+    color:#16233d;
+}
+.nav-appointment:hover{
+    background:var(--primary-dark);
+}
+.btn-outline:hover{
+    border-color:var(--primary);
+    color:var(--primary);
+}
+.product-card:hover{
+    border-color:#cbd8e7;
+}
+.hero-badge{
+    border-color:#dceaf3;
+}
+.filter-btn.active{
+    border-color:#b8e2f8;
+    background:#b8e2f8;
+    color:#16233d;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL & MICRO-INTERACTIONS
+   ========================================================= */
+
+/* Base reveal state */
+.reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition:
+        opacity 0.62s cubic-bezier(.2,.7,.2,1),
+        transform 0.62s cubic-bezier(.2,.7,.2,1);
+    will-change: opacity, transform;
+}
+
+.reveal-left {
+    transform: translateX(-42px);
+}
+
+.reveal-right {
+    transform: translateX(42px);
+}
+
+.reveal-scale {
+    transform: scale(0.965);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Staggered children */
+.stagger-group > .reveal:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.stagger-group > .reveal:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.stagger-group > .reveal:nth-child(3) {
+    transition-delay: 0.19s;
+}
+
+.stagger-group > .reveal:nth-child(4) {
+    transition-delay: 0.26s;
+}
+
+.stagger-group > .reveal:nth-child(5) {
+    transition-delay: 0.33s;
+}
+
+.stagger-group > .reveal:nth-child(6) {
+    transition-delay: 0.40s;
+}
+
+/* Hero entrance animation */
+.hero-copy.reveal.show h1 {
+    animation: heroTextFloat 0.9s cubic-bezier(.2,.7,.2,1) both;
+}
+
+@keyframes heroTextFloat {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar scroll state */
+.site-header {
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.site-header.scrolled {
+    box-shadow: 0 10px 30px rgba(22, 35, 61, 0.10);
+    background: rgba(255, 255, 255, 0.985);
+}
+
+/* Smooth image hover */
+.category-card img,
+.product-image img,
+.blog-card img,
+.hero-visual img,
+.promo-image-wrap img,
+.eye-care-photo img,
+.reading-grid img {
+    transition: transform 0.55s cubic-bezier(.2,.7,.2,1);
+}
+
+.blog-card:hover img {
+    transform: scale(1.035);
+}
+
+.eye-care-photo:hover img,
+.reading-grid:hover img {
+    transform: scale(1.02);
+}
+
+/* Button micro interaction */
+.btn,
+.nav-appointment,
+.section-link,
+.text-arrow,
+.card-link {
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        background-color 0.22s ease,
+        color 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.btn:hover,
+.nav-appointment:hover {
+    box-shadow: 0 10px 24px rgba(66, 97, 171, 0.16);
+}
+
+/* Cards get a subtle active feel after reveal */
+.product-card.show,
+.category-card.show,
+.blog-card.show,
+.mini-product.show,
+.why-grid article.show {
+    will-change: auto;
+}
+
+/* Accessibility: disable motion for users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Keep animations softer on phones */
+@media (max-width: 640px) {
+    .reveal {
+        transform: translateY(24px);
+    }
+
+    .reveal-left,
+    .reveal-right {
+        transform: translateY(24px);
+    }
+
+    .reveal-scale {
+        transform: scale(0.98);
+    }
+
+    .reveal.show,
+    .reveal-left.show,
+    .reveal-right.show,
+    .reveal-scale.show {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   ENHANCED HOVER EFFECTS
+   ========================================================= */
+
+/* Product cards */
+.product-card {
+    position: relative;
+    transition:
+        transform 0.28s cubic-bezier(.2,.7,.2,1),
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(66, 97, 171, 0.34);
+    box-shadow: 0 18px 38px rgba(22, 35, 61, 0.13);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.055);
+}
+
+.product-card:hover .product-bottom a {
+    color: var(--primary);
+}
+
+/* Category cards */
+.category-card {
+    transition:
+        transform 0.3s cubic-bezier(.2,.7,.2,1),
+        box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(22, 35, 61, 0.16);
+}
+
+.category-card:hover img {
+    transform: scale(1.065);
+}
+
+.category-card:hover .category-overlay span {
+    transform: translateX(5px);
+}
+
+.category-overlay span {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+/* Discovery items */
+.discovery-item {
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        background-color 0.28s ease;
+}
+
+.discovery-item:hover {
+    transform: translateY(-7px);
+    background: #29395c;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+}
+
+.discovery-item img {
+    transition: transform 0.4s ease;
+}
+
+.discovery-item:hover img {
+    transform: scale(1.045);
+}
+
+/* Contact lens cards */
+.mini-product {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.mini-product:hover {
+    transform: translateX(7px);
+    border-color: rgba(66, 97, 171, 0.35);
+    background: #f3f8fc;
+    box-shadow: 0 12px 28px rgba(22, 35, 61, 0.09);
+}
+
+.mini-product img {
+    transition: transform 0.35s ease;
+}
+
+.mini-product:hover img {
+    transform: scale(1.055);
+}
+
+/* Eye-care service rows */
+.service {
+    transition:
+        transform 0.24s ease,
+        padding-left 0.24s ease,
+        background-color 0.24s ease;
+}
+
+.service:hover {
+    transform: translateX(6px);
+    padding-left: 10px;
+    background: rgba(184, 226, 248, 0.22);
+}
+
+.service > span {
+    transition: transform 0.24s ease, color 0.24s ease;
+}
+
+.service:hover > span {
+    transform: scale(1.12);
+    color: var(--primary-dark);
+}
+
+/* Why choose us cards */
+.why-grid article {
+    transition:
+        transform 0.28s ease,
+        background-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.why-grid article:hover {
+    z-index: 2;
+    transform: translateY(-7px);
+    background: #f6fbff;
+    box-shadow: 0 16px 35px rgba(22, 35, 61, 0.10);
+}
+
+/* Blog cards */
+.blog-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(66, 97, 171, 0.32);
+    box-shadow: 0 18px 38px rgba(22, 35, 61, 0.12);
+}
+
+.blog-card:hover img {
+    transform: scale(1.06);
+}
+
+.blog-card:hover .blog-copy a {
+    color: var(--primary);
+}
+
+/* Audio and video cards */
+.audio-card,
+.video-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.audio-card:hover,
+.video-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(66, 97, 171, 0.34);
+    box-shadow: 0 18px 40px rgba(22, 35, 61, 0.11);
+}
+
+/* Promotional image / eye care image / reading image */
+.promo-image-wrap,
+.eye-care-photo,
+.reading-grid img {
+    overflow: hidden;
+}
+
+.promo-image-wrap img,
+.eye-care-photo img,
+.reading-grid img {
+    transition: transform 0.55s cubic-bezier(.2,.7,.2,1);
+}
+
+.promo-image-wrap:hover img,
+.eye-care-photo:hover img,
+.reading-grid img:hover {
+    transform: scale(1.035);
+}
+
+/* Appointment CTA */
+.appointment-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(45, 71, 131, 0.18);
+}
+
+/* Buttons */
+.btn,
+.nav-appointment {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after,
+.nav-appointment::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateX(-110%);
+    transition: transform 0.35s ease;
+}
+
+.btn:hover::after,
+.nav-appointment:hover::after {
+    transform: translateX(0);
+}
+
+.btn:hover,
+.nav-appointment:hover {
+    transform: translateY(-3px);
+}
+
+/* Text links */
+.section-link,
+.text-arrow,
+.product-bottom a,
+.blog-copy a {
+    transition:
+        color 0.22s ease,
+        transform 0.22s ease;
+}
+
+.section-link:hover,
+.text-arrow:hover,
+.product-bottom a:hover,
+.blog-copy a:hover {
+    color: var(--primary);
+}
+
+/* Navbar links */
+.nav-links a {
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Brand */
+.brand {
+    transition: transform 0.22s ease;
+}
+
+.brand:hover {
+    transform: scale(1.025);
+}
+
+/* Keep hover effects sensible on touch devices */
+@media (hover: none) {
+    .product-card:hover,
+    .category-card:hover,
+    .discovery-item:hover,
+    .mini-product:hover,
+    .service:hover,
+    .why-grid article:hover,
+    .blog-card:hover,
+    .audio-card:hover,
+    .video-card:hover,
+    .appointment-card:hover,
+    .btn:hover,
+    .nav-appointment:hover,
+    .brand:hover {
+        transform: none;
+    }
+
+    .product-card:hover .product-image img,
+    .category-card:hover img,
+    .discovery-item:hover img,
+    .mini-product:hover img,
+    .blog-card:hover img,
+    .promo-image-wrap:hover img,
+    .eye-care-photo:hover img,
+    .reading-grid img:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   WEBSITE LOGO
+   ========================================================= */
+
+.brand-logo-link {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.website-logo {
+    display: block;
+    width: auto;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 8px rgba(22, 35, 61, 0.08));
+    transition:
+        transform 0.28s ease,
+        filter 0.28s ease;
+}
+
+.brand-logo-link:hover .website-logo {
+    transform: scale(1.045);
+    filter: drop-shadow(0 6px 12px rgba(66, 97, 171, 0.18));
+}
+
+.footer-logo {
+    height: 108px;
+    filter: brightness(1.08) drop-shadow(0 5px 14px rgba(0, 0, 0, 0.15));
+}
+
+/* Give the taller graphic enough room without making the navbar bulky. */
+.navbar {
+    min-height: 88px;
+}
+
+@media (max-width: 1030px) {
+    .nav-panel {
+        top: 88px;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        min-height: 78px;
+    }
+
+    .website-logo {
+        height: 55px;
+    }
+
+    .footer-logo {
+        height: 92px;
+    }
+
+    .nav-panel {
+        top: 78px;
+    }
+}
